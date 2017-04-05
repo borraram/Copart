@@ -6,23 +6,19 @@ public class SoftwareLicenceCode {
 			 Scanner s = new Scanner(System.in);
 			 System.out.println("Enter the key ");
 			 String text = s.nextLine();
+//			 String text = "2-4$0r7-4k";
 			 if(text.length()==0)
 				 System.out.println("**Invalid Input**");
 			 else
 			 try{	 
 			 System.out.println("enter the no of periods");
 			 int period = s.nextInt();
+//			 int period = 4;
 			 text = text.replace("-", "");
 			 String insert = "-";
-			 text.toLowerCase();
 // Trying to avoid special charcters 			 
-//			 for(int i=0;i<text.length();i++)
-//				 if((!(text.charAt(i)>'a'&&text.charAt(i)<'z')))
-//				 	 {
-//					 if(text.charAt(i)>'0'&& text.charAt(i)<'9');
-//					 else
-//					 throw new InputMismatchException();
-//				 	 }
+				 if(!(text.matches("^[a-zA-Z0-9_]*$")))
+				 	throw new InputMismatchException();
 		    StringBuilder builder = new StringBuilder();
 
 		       int index = 0;
